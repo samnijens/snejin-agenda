@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Snejin Agenda</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="auth.js" defer></script>
+
+</head>
+
+<body class="home-body">
+
+<header class="header">
+
+    <img src="logo.png" alt="Snejin Logo">
+
+    <button id="logoutButton" class="logoutButton">
+        Uitloggen
+    </button>
+
+</header>
+
+<main class="main">
+
+    <div class="card">
+
+        <h2>Welkom bij de Snejin Agenda</h2>
+
+        <p>
+            Je bent succesvol ingelogd.
+        </p>
+
+        <br>
+
+        <p>
+            Ingelogd als:
+            <strong id="userEmail">Laden...</strong>
+        </p>
+
+        <hr style="margin:30px 0;">
+
+        <h3>Status</h3>
+
+        <ul>
+            <li>✅ Firebase Authentication werkt</li>
+            <li>✅ Loginbeveiliging actief</li>
+            <li>✅ Uitloggen werkt</li>
+            <li>✅ Achtergrond geladen</li>
+            <li>✅ Logo geladen</li>
+        </ul>
+
+        <hr style="margin:30px 0;">
+
+        <h3>Volgende stap</h3>
+
+        <p>
+            Hier komt in Deel 2 de volledige agenda met maand-, week- en dagweergave,
+            afspraken, kleuren per onderwerp en Firestore-opslag.
+        </p>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>
