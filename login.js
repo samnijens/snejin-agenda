@@ -1,91 +1,108 @@
+console.log("✅ login.js geladen");
+
+
 import { auth } from "./firebase.js";
+
 
 import {
     signInWithEmailAndPassword
 }
-from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-
-
-const loginButton = document.getElementById("loginButton");
-
-
-loginButton.addEventListener("click", async function(){
-
-
-    const email = document.getElementById("email").value;
-
-    const password = document.getElementById("password").value;
-
-
-    const errorText = document.getElementById("error");
-
-
-    errorText.innerHTML = "Bezig met inloggen...";
-
-
-    try {
-
-
-        const userCredential =
-        await signInWithEmailAndPassword(
-            auth,
-            email,
-            password
-        );
-
-
-        errorText.style.color = "green";
-
-        errorText.innerHTML =
-        "✅ Inloggen gelukt!";
-
-
-        console.log(
-            "Ingelogd:",
-            userCredential.user.email
-        );
-
-
-        setTimeout(()=>{
-
-            window.location.href = "agenda.html";
-
-        },1000);
+from 
+"https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 
 
-    } catch(error) {
+const button = document.getElementById("loginButton");
 
 
-        console.error(error);
+if (!button) {
+
+    console.error("❌ Login knop niet gevonden");
+
+}
 
 
-        errorText.style.color = "red";
+button.addEventListener("click", async function(){
 
 
-        if(error.code === "auth/invalid-credential"){
-
-            errorText.innerHTML =
-            "❌ Onjuist emailadres of wachtwoord";
-
-        }
-
-        else if(error.code === "auth/invalid-email"){
-
-            errorText.innerHTML =
-            "❌ Ongeldig emailadres";
-
-        }
-
-        else {
-
-            errorText.innerHTML =
-            "❌ Fout: " + error.message;
-
-        }
+console.log("🟢 Login knop ingedrukt");
 
 
-    }
+const email =
+document.getElementById("email").value;
+
+
+const password =
+document.getElementById("password").value;
+
+
+const error =
+document.getElementById("error");
+
+
+
+error.innerHTML = "Even geduld...";
+
+
+
+try {
+
+
+const result =
+await signInWithEmailAndPassword(
+auth,
+email,
+password
+);
+
+
+
+console.log(
+"✅ Ingelogd:",
+result.user.email
+);
+
+
+
+error.style.color="green";
+
+error.innerHTML =
+"✅ Inloggen gelukt!";
+
+
+setTimeout(()=>{
+
+
+window.location.href="agenda.html";
+
+
+},1000);
+
+
+
+}
+
+
+catch(e){
+
+
+console.error(
+"Firebase fout:",
+e
+);
+
+
+
+error.style.color="red";
+
+
+error.innerHTML =
+"❌ " + e.message;
+
+
+
+}
+
 
 
 });
