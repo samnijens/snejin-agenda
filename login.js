@@ -1,58 +1,91 @@
 import { auth } from "./firebase.js";
 
-
 import {
-
-signInWithEmailAndPassword
-
+    signInWithEmailAndPassword
 }
-
-from
-
-"https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 
+const loginButton = document.getElementById("loginButton");
 
 
-document
-.getElementById("loginButton")
-.addEventListener("click", async ()=>{
+loginButton.addEventListener("click", async function(){
 
 
-const email =
-document.getElementById("email").value;
+    const email = document.getElementById("email").value;
+
+    const password = document.getElementById("password").value;
 
 
-const password =
-document.getElementById("password").value;
+    const errorText = document.getElementById("error");
+
+
+    errorText.innerHTML = "Bezig met inloggen...";
+
+
+    try {
+
+
+        const userCredential =
+        await signInWithEmailAndPassword(
+            auth,
+            email,
+            password
+        );
+
+
+        errorText.style.color = "green";
+
+        errorText.innerHTML =
+        "✅ Inloggen gelukt!";
+
+
+        console.log(
+            "Ingelogd:",
+            userCredential.user.email
+        );
+
+
+        setTimeout(()=>{
+
+            window.location.href = "agenda.html";
+
+        },1000);
 
 
 
-try{
+    } catch(error) {
 
 
-await signInWithEmailAndPassword(
-auth,
-email,
-password
-);
+        console.error(error);
 
 
-
-window.location.href="agenda.html";
-
-
-}
-
-catch(error){
+        errorText.style.color = "red";
 
 
-document.getElementById("error").innerHTML =
-"❌ Onjuiste email of wachtwoord";
+        if(error.code === "auth/invalid-credential"){
+
+            errorText.innerHTML =
+            "❌ Onjuist emailadres of wachtwoord";
+
+        }
+
+        else if(error.code === "auth/invalid-email"){
+
+            errorText.innerHTML =
+            "❌ Ongeldig emailadres";
+
+        }
+
+        else {
+
+            errorText.innerHTML =
+            "❌ Fout: " + error.message;
+
+        }
 
 
-}
-
+    }
 
 
 });
