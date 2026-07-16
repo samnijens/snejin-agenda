@@ -1,46 +1,58 @@
 import { auth } from "./firebase.js";
 
+
 import {
-    signInWithEmailAndPassword
-} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
+signInWithEmailAndPassword
 
-const loginButton = document.getElementById("loginButton");
+}
 
+from
 
-loginButton.addEventListener("click", async () => {
-
-
-    const email =
-        document.getElementById("email").value;
-
-
-    const password =
-        document.getElementById("password").value;
+"https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 
 
-    try {
+
+document
+.getElementById("loginButton")
+.addEventListener("click", async ()=>{
 
 
-        await signInWithEmailAndPassword(
-            auth,
-            email,
-            password
-        );
+const email =
+document.getElementById("email").value;
 
 
-        window.location.href = "agenda.html";
+const password =
+document.getElementById("password").value;
 
 
-    } catch(error) {
+
+try{
 
 
-        document.getElementById("error").innerHTML =
-        "❌ Onjuiste email of wachtwoord";
+await signInWithEmailAndPassword(
+auth,
+email,
+password
+);
 
 
-    }
+
+window.location.href="agenda.html";
+
+
+}
+
+catch(error){
+
+
+document.getElementById("error").innerHTML =
+"❌ Onjuiste email of wachtwoord";
+
+
+}
+
 
 
 });
