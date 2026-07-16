@@ -1,33 +1,26 @@
-// Firebase configuratie
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js";
-
-import { getAuth } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-auth.js";
+import { initializeApp } from "firebase/app";
+import { 
+  getAuth 
+} from "firebase/auth";
 
 import {
-    getFirestore
-} from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
+  getFirestore
+} from "firebase/firestore";
 
-// Firebase instellingen
+
 const firebaseConfig = {
-
-    apiKey: "AIzaSyANmArkrkCQRKwyEDrIgFokX0NLBZ5O3qw",
-
-    authDomain: "snejin-agenda-b63b3.firebaseapp.com",
-
-    projectId: "snejin-agenda-b63b3",
-
-    storageBucket: "snejin-agenda-b63b3.firebasestorage.app",
-
-    messagingSenderId: "1065483226806",
-
-    appId: "1:1065483226806:web:d43dd736dfab44c39ee017"
-
+  apiKey: "AIzaSyARKx42cvUgW9Qpf33DmBirfMdSERi8Jl8",
+  authDomain: "snejin-agenda-7db33.firebaseapp.com",
+  projectId: "snejin-agenda-7db33",
+  storageBucket: "snejin-agenda-7db33.firebasestorage.app",
+  messagingSenderId: "494528590764",
+  appId: "1:494528590764:web:c177e87c3842fc9c55c009"
 };
 
-// Firebase starten
+
 const app = initializeApp(firebaseConfig);
 
-// Services exporteren
+
 export const auth = getAuth(app);
 
 export const db = getFirestore(app);
