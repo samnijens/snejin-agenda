@@ -1,0 +1,281 @@
+/* =========================
+   ALGEMEEN
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   LOGIN PAGINA
+========================= */
+
+.login-body{
+
+    background-image:url("main__background.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    min-height:100vh;
+
+}
+
+.overlay{
+
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,.45);
+
+}
+
+.login-box{
+
+    width:420px;
+    max-width:90%;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+.logo{
+
+    width:140px;
+
+    margin-bottom:25px;
+
+}
+
+.login-box h1{
+
+    margin-bottom:10px;
+
+    color:#222;
+
+}
+
+.login-box p{
+
+    color:#555;
+
+    margin-bottom:25px;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    border:1px solid #ccc;
+
+    margin-bottom:15px;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+input:focus{
+
+    border:1px solid #0a84ff;
+
+}
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#0a84ff;
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+button:hover{
+
+    background:#0068d6;
+
+}
+
+#errorBox{
+
+    margin-top:20px;
+
+    color:red;
+
+    font-weight:bold;
+
+    min-height:24px;
+
+}
+
+.footer{
+
+    margin-top:30px;
+
+    color:#777;
+
+    font-size:13px;
+
+}
+
+/* =========================
+   HOME PAGINA
+========================= */
+
+.home-body{
+
+    background-image:url("default_background.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    min-height:100vh;
+
+}
+
+.header{
+
+    width:100%;
+
+    height:80px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 30px;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.15);
+
+}
+
+.header img{
+
+    height:55px;
+
+}
+
+.logoutButton{
+
+    width:170px;
+
+}
+
+.main{
+
+    padding:50px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    max-width:900px;
+
+    margin:auto;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+
+}
+
+.card h2{
+
+    margin-bottom:20px;
+
+}
+
+.card p{
+
+    line-height:1.6;
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:700px){
+
+.login-box{
+
+    padding:30px 20px;
+
+}
+
+.header{
+
+    flex-direction:column;
+
+    height:auto;
+
+    gap:15px;
+
+    padding:20px;
+
+}
+
+.main{
+
+    padding:20px;
+
+}
+
+.card{
+
+    padding:25px;
+
+}
+
+}
