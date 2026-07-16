@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snejin Agenda - Login</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="auth.js" defer></script>
+</head>
+
+<body class="login-body">
+
+<div class="overlay">
+
+    <div class="login-box">
+
+        <img src="logo.png" class="logo" alt="Logo">
+
+        <h1>Snejin Agenda</h1>
+
+        <p>Log in om verder te gaan</p>
+
+        <form id="loginForm">
+
+            <input
+                type="email"
+                id="email"
+                placeholder="E-mailadres"
+                autocomplete="email"
+                required
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Wachtwoord"
+                autocomplete="current-password"
+                required
+            >
+
+            <button type="submit" id="loginButton">
+                Inloggen
+            </button>
+
+        </form>
+
+        <div id="errorBox"></div>
+
+        <div class="footer">
+
+            © 2026 Snejin Agenda
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
