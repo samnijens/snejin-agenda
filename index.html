@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snejin Agenda - Login</title>
+
+    <title>Snejin Agenda</title>
 
     <link rel="stylesheet" href="style.css">
 
     <script type="module" src="firebase.js"></script>
     <script type="module" src="auth.js" defer></script>
+
 </head>
 
 <body class="login-body">
@@ -17,32 +22,35 @@
 
     <div class="login-box">
 
-        <img src="logo.png" class="logo" alt="Logo">
+        <img src="logo.png" class="logo" alt="Snejin Logo">
 
         <h1>Snejin Agenda</h1>
 
-        <p>Log in om verder te gaan</p>
+        <p>
+            Welkom terug.<br>
+            Log in om je familieagenda te openen.
+        </p>
 
         <form id="loginForm">
 
             <input
                 type="email"
                 id="email"
-                placeholder="E-mailadres"
-                autocomplete="email"
+                placeholder="📧 E-mailadres"
                 required
             >
 
             <input
                 type="password"
                 id="password"
-                placeholder="Wachtwoord"
-                autocomplete="current-password"
+                placeholder="🔒 Wachtwoord"
                 required
             >
 
-            <button type="submit" id="loginButton">
+            <button type="submit">
+
                 Inloggen
+
             </button>
 
         </form>
@@ -51,7 +59,9 @@
 
         <div class="footer">
 
-            © 2026 Snejin Agenda
+            © 2026 Snejin Agenda<br><br>
+
+            Familie • Agenda • Planning
 
         </div>
 
@@ -60,4 +70,5 @@
 </div>
 
 </body>
+
 </html>
