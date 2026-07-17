@@ -3,151 +3,154 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snejin Agenda</title>
 
-<title>Snejin Agenda</title>
+    <link rel="icon" href="logo.png">
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-
-<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.css" rel="stylesheet">
-
-<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
+    <!-- FullCalendar -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
 
 </head>
 
+<body class="agenda-page">
 
-<body class="agenda-background">
+<header class="topbar">
 
+    <div class="logo-area">
 
-<header>
+        <img src="logo.png" class="logo-small">
 
-<div class="brand">
+        <div>
 
-<img src="logo.png" class="logo-small">
+            <h1>Snejin Agenda</h1>
 
-<h1>Snejin Agenda 🌴</h1>
+            <span>Familieagenda</span>
 
-</div>
+        </div>
 
+    </div>
 
-<button id="logoutButton">
-Uitloggen
-</button>
+    <div class="top-buttons">
 
+        <input
+            id="search"
+            type="search"
+            placeholder="🔍 Zoek afspraak...">
+
+        <button id="themeButton">
+            🌙
+        </button>
+
+        <button id="logoutButton">
+            Uitloggen
+        </button>
+
+    </div>
 
 </header>
 
+<main>
 
+    <section class="calendar-card">
 
-<main class="agenda-box">
+        <div id="calendar"></div>
 
-<div id="calendar"></div>
+    </section>
 
 </main>
 
+<button id="addEventButton" class="floatingButton">
 
+    ➕
 
-<!-- afspraak venster -->
+</button>
+
+<!-- Popup -->
 
 <div id="eventModal" class="modal">
 
+    <div class="modal-content">
 
-<div class="modal-content">
+        <h2>Nieuwe afspraak</h2>
 
+        <label>Naam</label>
 
-<h2>
-Nieuwe afspraak
-</h2>
+        <input
+            id="eventTitle"
+            type="text"
+            placeholder="Bijvoorbeeld: Werken">
 
+        <label>Omschrijving</label>
 
-<input id="eventTitle"
-placeholder="Naam afspraak">
+        <textarea
+            id="eventDescription"
+            placeholder="Extra informatie"></textarea>
 
+        <label>Datum</label>
 
-<textarea id="eventDescription"
-placeholder="Omschrijving"></textarea>
+        <input
+            id="eventDate"
+            type="date">
 
+        <label>Tijd</label>
 
-<label>
-Datum
-</label>
+        <input
+            id="eventTime"
+            type="time">
 
-<input id="eventDate" type="date">
+        <label>
 
+            <input
+                id="allDay"
+                type="checkbox">
 
+            Hele dag
 
-<label>
-Tijd
-</label>
+        </label>
 
-<input id="eventTime" type="time">
+        <label>Soort afspraak</label>
 
+        <select id="eventType">
 
+            <option value="werk">🔴 Werken</option>
 
-<label>
+            <option value="vakantie">🟢 Vakantie</option>
 
-<input id="allDay" type="checkbox">
+            <option value="activiteit">🟩 Activiteit</option>
 
-Hele dag
+            <option value="verjaardag">🟠 Verjaardag</option>
 
-</label>
+            <option value="feestdag">🟡 Feestdag</option>
 
+        </select>
 
+        <div class="modalButtons">
 
-<label>
-Type afspraak
-</label>
+            <button id="saveEvent">
 
+                Opslaan
 
-<select id="eventType">
+            </button>
 
-<option value="werk">
-🔴 Werken
-</option>
+            <button id="cancelEvent">
 
-<option value="vakantie">
-🟢 Vakanties
-</option>
+                Annuleren
 
-<option value="activiteit">
-🟩 Activiteiten
-</option>
+            </button>
 
-<option value="verjaardag">
-🟠 Verjaardagen
-</option>
+        </div>
 
-<option value="feestdag">
-🟡 Officiële feestdagen
-</option>
-
-
-</select>
-
-
-
-<button id="saveEvent">
-Opslaan
-</button>
-
-
-<button id="closeModal">
-Annuleren
-</button>
-
+    </div>
 
 </div>
-
-</div>
-
-
 
 <script type="module" src="agenda.js"></script>
 
-
 </body>
-
 </html>
