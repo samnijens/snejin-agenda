@@ -1,11 +1,41 @@
 /* ======================================================
-   SNEJIN AGENDA - LOGIN HERSTEL
+   SNEJIN AGENDA
+   COMPLETE STYLE.CSS
 ====================================================== */
 
 
-body.login-page {
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html,
+body{
+
+    width:100%;
+    min-height:100%;
+
+    font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+}
+
+
+
+/* ======================================================
+   LOGIN PAGINA
+====================================================== */
+
+
+body.login-page{
+
 
     min-height:100vh;
+
 
     background:
 
@@ -25,32 +55,38 @@ body.login-page {
 
     background-attachment:fixed;
 
+
 }
 
 
 
+.login-overlay{
 
-.login-overlay {
 
     min-height:100vh;
 
+
     display:flex;
+
 
     justify-content:center;
 
+
     align-items:center;
 
+
     padding:25px;
+
 
 }
 
 
 
-
-.login-card {
+.login-card{
 
 
     width:100%;
+
 
     max-width:430px;
 
@@ -60,9 +96,8 @@ body.login-page {
     rgba(255,255,255,.92);
 
 
-    backdrop-filter:
 
-    blur(20px);
+    backdrop-filter:blur(20px);
 
 
 
@@ -84,19 +119,15 @@ body.login-page {
 
 
 
-    animation:loginFade .6s ease;
-
-
 }
 
 
 
-
-
-.login-card .logo {
+.login-card .logo{
 
 
     width:140px;
+
 
     margin-bottom:20px;
 
@@ -105,8 +136,7 @@ body.login-page {
 
 
 
-
-.login-card h1 {
+.login-card h1{
 
 
     color:#008b8b;
@@ -122,9 +152,7 @@ body.login-page {
 
 
 
-
-
-.subtitle {
+.subtitle{
 
 
     color:#666;
@@ -137,8 +165,7 @@ body.login-page {
 
 
 
-
-.form-group {
+.form-group{
 
 
     text-align:left;
@@ -151,8 +178,7 @@ body.login-page {
 
 
 
-
-.form-group label {
+.form-group label{
 
 
     display:block;
@@ -171,8 +197,7 @@ body.login-page {
 
 
 
-
-.form-group input {
+.form-group input{
 
 
     width:100%;
@@ -200,8 +225,7 @@ body.login-page {
 
 
 
-
-.form-group input:focus {
+.form-group input:focus{
 
 
     outline:none;
@@ -220,7 +244,7 @@ body.login-page {
 
 
 
-#loginButton {
+#loginButton{
 
 
     width:100%;
@@ -259,31 +283,12 @@ body.login-page {
     cursor:pointer;
 
 
-    transition:.25s;
-
-
 }
 
 
 
 
-#loginButton:hover {
-
-
-    transform:translateY(-3px);
-
-
-    box-shadow:
-
-    0 10px 25px rgba(0,0,0,.25);
-
-
-}
-
-
-
-
-.message {
+.message{
 
 
     min-height:25px;
@@ -300,29 +305,39 @@ body.login-page {
 
 
 
-@keyframes loginFade {
 
 
-    from {
+/* ======================================================
+   AGENDA PAGINA
+====================================================== */
 
 
-        opacity:0;
-
-        transform:translateY(20px);
+body.agenda-page{
 
 
-    }
+    min-height:100vh;
 
 
-    to {
+    background:
 
 
-        opacity:1;
+    linear-gradient(
+        rgba(0,0,0,.20),
+        rgba(0,150,170,.25)
+    ),
 
-        transform:translateY(0);
+
+    url("main_background.jpg");
 
 
-    }
+
+    background-size:cover;
+
+
+    background-position:center;
+
+
+    background-attachment:fixed;
 
 
 }
@@ -331,23 +346,481 @@ body.login-page {
 
 
 
-@media(max-width:500px){
+/* HEADER */
 
 
-    .login-card {
+.topbar{
 
 
-        padding:25px;
+    margin:20px;
 
 
-        border-radius:25px;
+    padding:18px 25px;
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+    gap:20px;
+
+
+
+    border-radius:25px;
+
+
+
+    background:
+
+    rgba(255,255,255,.90);
+
+
+
+    backdrop-filter:blur(20px);
+
+
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,.18);
+
+
+}
+
+
+
+.logo-area{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:15px;
+
+
+}
+
+
+
+.logo-small{
+
+
+    width:65px;
+
+
+}
+
+
+
+.logo-area h1{
+
+
+    color:#008b8b;
+
+
+}
+
+
+
+.logo-area span{
+
+
+    color:#666;
+
+
+}
+
+
+
+
+
+
+/* KNOPPEN */
+
+
+.top-buttons{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:10px;
+
+
+}
+
+
+
+.top-buttons input{
+
+
+    height:45px;
+
+
+    width:230px;
+
+
+    border:none;
+
+
+    border-radius:15px;
+
+
+    padding:0 15px;
+
+
+}
+
+
+
+
+.top-buttons button{
+
+
+    height:45px;
+
+
+    padding:0 18px;
+
+
+    border:none;
+
+
+    border-radius:15px;
+
+
+    cursor:pointer;
+
+
+    color:white;
+
+
+    background:#00A896;
+
+
+    font-weight:bold;
+
+
+}
+
+
+
+
+
+
+/* ======================================================
+   KALENDER
+====================================================== */
+
+
+main{
+
+
+    padding:20px;
+
+
+}
+
+
+
+.calendar-card{
+
+
+    max-width:1500px;
+
+
+    margin:auto;
+
+
+    background:
+
+    rgba(255,255,255,.94);
+
+
+
+    border-radius:30px;
+
+
+
+    padding:25px;
+
+
+
+    box-shadow:
+
+    0 25px 70px rgba(0,0,0,.25);
+
+
+}
+
+
+
+#calendar{
+
+
+    width:100%;
+
+
+}
+
+
+
+.fc{
+
+
+    background:white;
+
+
+    border-radius:20px;
+
+
+    padding:10px;
+
+
+}
+
+
+
+.fc-button{
+
+
+    background:#00A896 !important;
+
+
+    border:none !important;
+
+
+    border-radius:12px !important;
+
+
+}
+
+
+
+.fc-toolbar-title{
+
+
+    color:#008b8b !important;
+
+
+}
+
+
+
+.fc-event{
+
+
+    border-radius:8px !important;
+
+
+    border:none !important;
+
+
+}
+
+
+
+
+
+/* ======================================================
+   NIEUWE AFSPRAAK KNOP
+====================================================== */
+
+
+.floatingButton{
+
+
+    position:fixed;
+
+
+    right:30px;
+
+
+    bottom:30px;
+
+
+    width:65px;
+
+
+    height:65px;
+
+
+    border:none;
+
+
+    border-radius:50%;
+
+
+    background:#00A896;
+
+
+    color:white;
+
+
+    font-size:35px;
+
+
+    cursor:pointer;
+
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.30);
+
+
+}
+
+
+
+
+
+
+/* ======================================================
+   DONKER MODUS
+====================================================== */
+
+
+body.dark .topbar,
+body.dark .calendar-card{
+
+
+    background:
+
+    rgba(25,25,25,.92);
+
+
+    color:white;
+
+
+}
+
+
+
+body.dark .fc{
+
+
+    background:#1e1e1e;
+
+
+}
+
+
+
+body.dark .fc-daygrid-day-number,
+body.dark .fc-col-header-cell-cushion{
+
+
+    color:white;
+
+
+}
+
+
+
+body.dark .fc-toolbar-title{
+
+
+    color:#00d4c0 !important;
+
+
+}
+
+
+
+body.dark .logo-area span{
+
+
+    color:#ddd;
+
+
+}
+
+
+
+
+
+
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+
+@media(max-width:800px){
+
+
+    .topbar{
+
+
+        flex-direction:column;
 
 
     }
 
 
 
-    .login-card h1 {
+    .top-buttons{
+
+
+        width:100%;
+
+
+        flex-wrap:wrap;
+
+
+    }
+
+
+
+    .top-buttons input{
+
+
+        width:100%;
+
+
+    }
+
+
+
+    .calendar-card{
+
+
+        padding:10px;
+
+
+    }
+
+
+
+}
+
+
+
+@media(max-width:500px){
+
+
+    .login-card{
+
+
+        padding:25px;
+
+
+    }
+
+
+
+    .login-card h1{
 
 
         font-size:28px;
@@ -357,7 +830,7 @@ body.login-page {
 
 
 
-    .login-card .logo {
+    .logo{
 
 
         width:110px;
