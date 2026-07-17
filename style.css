@@ -1,750 +1,285 @@
-* {
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Arial, sans-serif;
-}
+/* ==========================================
+   SNEJIN AGENDA
+   style.css
+========================================== */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    margin: 0;
-    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #222;
 }
 
-
-/* =========================
-   LOGIN PAGINA
-========================= */
-
+/* ==========================================
+   LOGIN ACHTERGROND
+========================================== */
 
 .login-background {
 
-    background-image:
-    linear-gradient(
-        rgba(0,180,200,0.25),
-        rgba(255,220,150,0.25)
-    ),
-    url("default_background.jpg");
-
-
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
+    min-height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-
     padding: 20px;
+
+    background:
+        linear-gradient(
+            rgba(0, 180, 200, 0.30),
+            rgba(255, 220, 150, 0.30)
+        ),
+        url("default_background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.login-container {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
 
 }
 
+/* ==========================================
+   LOGIN VAK
+========================================== */
 
-
-.login-box {
+.login-card {
 
     width: 100%;
-    max-width: 420px;
+    max-width: 430px;
 
-
-    background:
-    rgba(255,255,255,0.88);
-
+    background: rgba(255,255,255,0.90);
 
     backdrop-filter: blur(12px);
 
+    border-radius: 28px;
 
-    padding: 40px 35px;
+    padding: 40px;
 
-
-    border-radius: 30px;
-
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.25);
 
     text-align: center;
 
-
-    box-shadow:
-    0 20px 50px rgba(0,0,0,0.25);
-
 }
 
-
+/* ==========================================
+   LOGO
+========================================== */
 
 .logo {
 
     width: 150px;
-    max-width: 50vw;
 
     margin-bottom: 15px;
 
 }
 
+/* ==========================================
+   TITELS
+========================================== */
 
+.login-card h1 {
 
-.login-box h1 {
+    color: #008c8c;
 
-    color:#007f8b;
+    font-size: 34px;
 
-    font-size:32px;
-
-    margin:10px 0;
-
-}
-
-
-
-.login-box p {
-
-    color:#555;
+    margin-bottom: 10px;
 
 }
 
+.subtitle {
 
+    color: #666;
 
-input,
-textarea,
-select {
+    margin-bottom: 30px;
 
-
-    width:100%;
-
-
-    padding:14px;
-
-
-    margin:10px 0;
-
-
-    border-radius:18px;
-
-
-    border:1px solid #ddd;
-
-
-    font-size:16px;
-
-
-    background:#ffffff;
+    font-size: 16px;
 
 }
 
+/* ==========================================
+   INPUTS
+========================================== */
 
+.input-group {
 
-textarea {
+    text-align: left;
 
-    resize:none;
+    margin-bottom: 20px;
 
 }
 
+.input-group label {
 
+    display: block;
 
-button {
+    margin-bottom: 8px;
 
+    font-weight: 600;
 
-    padding:14px 30px;
+    color: #444;
 
+}
 
-    border:none;
+.input-group input {
 
+    width: 100%;
 
-    border-radius:25px;
+    height: 50px;
 
+    border: none;
+
+    border-radius: 16px;
+
+    background: #f4f7f8;
+
+    padding: 0 18px;
+
+    font-size: 16px;
+
+    transition: .25s;
+
+}
+
+.input-group input:focus {
+
+    outline: none;
+
+    background: white;
+
+    box-shadow: 0 0 0 3px rgba(0,168,150,.20);
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+#loginButton {
+
+    width: 100%;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 16px;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
 
     background:
-    linear-gradient(
-        135deg,
-        #00a896,
-        #02c39a
-    );
+        linear-gradient(
+            135deg,
+            #00A896,
+            #02C39A
+        );
 
-
-    color:white;
-
-
-    font-size:16px;
-
-
-    cursor:pointer;
-
-
-    transition:0.3s;
-
+    transition: .25s;
 
 }
 
+#loginButton:hover {
 
-
-button:hover {
-
-
-    transform:translateY(-2px);
-
-
-}
-
-
-
-#error {
-
-
-    color:red;
-
-    font-weight:bold;
-
-}
-
-
-
-/* =========================
-   AGENDA PAGINA
-========================= */
-
-
-.agenda-background {
-
-
-    background-image:
-
-    linear-gradient(
-        rgba(255,255,255,0.25),
-        rgba(0,150,160,0.25)
-    ),
-
-    url("main_background.jpg");
-
-
-    background-size:cover;
-
-
-    background-position:center;
-
-
-    background-attachment:fixed;
-
-
-}
-
-
-
-
-header {
-
-
-    width:100%;
-
-
-    display:flex;
-
-
-    justify-content:space-between;
-
-
-    align-items:center;
-
-
-    gap:20px;
-
-
-    padding:15px 30px;
-
-
-    background:
-    rgba(255,255,255,0.85);
-
-
-    backdrop-filter:blur(12px);
-
-
-    position:sticky;
-
-
-    top:0;
-
-
-    z-index:50;
-
-
-}
-
-
-
-.brand {
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    gap:15px;
-
-
-}
-
-
-
-.brand h1 {
-
-
-    margin:0;
-
-
-    color:#007f8b;
-
-
-    font-size:28px;
-
-
-}
-
-
-
-.logo-small {
-
-
-    width:70px;
-
-
-}
-
-
-
-header button {
-
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #ff9f1c,
-        #ffbf69
-    );
-
-
-    width:auto;
-
-
-}
-
-
-
-/* =========================
-   KALENDER
-========================= */
-
-
-.agenda-box {
-
-
-    width:
-    calc(100% - 40px);
-
-
-    max-width:1600px;
-
-
-    margin:20px auto;
-
-
-    padding:25px;
-
-
-    background:
-
-    rgba(255,255,255,0.88);
-
-
-    backdrop-filter:blur(12px);
-
-
-    border-radius:30px;
-
+    transform: translateY(-2px);
 
     box-shadow:
-
-    0 15px 40px rgba(0,0,0,.18);
-
+        0 10px 20px rgba(0,0,0,.20);
 
 }
 
+/* ==========================================
+   MELDINGEN
+========================================== */
 
+#message {
 
+    margin-top: 20px;
 
-#calendar {
+    min-height: 24px;
 
+    font-weight: bold;
 
-    width:100%;
-
-
-}
-
-
-
-.fc {
-
-
-    background:white;
-
-
-    padding:15px;
-
-
-    border-radius:20px;
-
+    text-align: center;
 
 }
 
+/* ==========================================
+   RESPONSIVE
+========================================== */
 
+@media (max-width: 768px) {
 
-.fc-toolbar-title {
+    .login-card {
 
+        padding: 30px 24px;
 
-    font-size:1.5rem !important;
+    }
 
+    .logo {
 
-}
+        width: 120px;
 
+    }
 
+    .login-card h1 {
 
-.fc-button {
+        font-size: 28px;
 
-
-    border-radius:15px !important;
-
-
-    border:none !important;
-
-
-}
-
-
-
-/* =========================
-   AFSPRAAK POPUP
-========================= */
-
-
-.modal {
-
-
-    display:none;
-
-
-    position:fixed;
-
-
-    inset:0;
-
-
-    background:
-
-    rgba(0,0,0,0.45);
-
-
-    justify-content:center;
-
-
-    align-items:center;
-
-
-    z-index:1000;
-
-
-    padding:20px;
-
+    }
 
 }
 
+@media (max-width: 480px) {
 
+    .login-card {
 
-.modal-content {
+        border-radius: 22px;
 
+        padding: 24px;
 
-    width:100%;
+    }
 
+    .logo {
 
-    max-width:450px;
+        width: 100px;
 
+    }
 
-    background:white;
+    .login-card h1 {
 
+        font-size: 24px;
 
-    padding:35px;
+    }
 
+    .subtitle {
 
-    border-radius:30px;
+        font-size: 14px;
 
-
-    box-shadow:
-
-    0 20px 50px rgba(0,0,0,.3);
-
-
-}
-
-
-
-.modal-content h2 {
-
-
-    text-align:center;
-
-
-    color:#007f8b;
-
-
-}
-
-
-
-.modal-content label {
-
-
-    display:block;
-
-
-    margin-top:10px;
-
-
-    font-weight:bold;
-
-
-}
-
-
-
-.modal-content input[type="checkbox"] {
-
-
-    width:auto;
-
-
-    margin-right:8px;
-
-
-}
-
-
-
-#saveEvent {
-
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #00a896,
-        #02c39a
-    );
-
-
-}
-
-
-
-#closeModal {
-
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #ff9f1c,
-        #ffbf69
-    );
-
-
-}
-
-
-
-/* =========================
-   KALENDER KLEUREN
-========================= */
-
-
-/* Werken */
-
-.fc-event {
-
-    border:none !important;
-
-    padding:4px;
-
-    border-radius:8px;
-
-}
-
-
-
-/* =========================
-   TABLET
-========================= */
-
-
-@media(max-width:900px){
-
-
-header {
-
-    padding:15px;
-
-}
-
-
-.brand h1 {
-
-    font-size:22px;
-
-}
-
-
-.logo-small {
-
-    width:55px;
-
-}
-
-
-.agenda-box {
-
-    width:95%;
-
-    padding:15px;
-
-}
-
-
-
-}
-
-
-
-/* =========================
-   MOBIEL
-========================= */
-
-
-@media(max-width:600px){
-
-
-.login-box {
-
-    padding:30px 20px;
-
-}
-
-
-
-.login-box h1 {
-
-    font-size:26px;
-
-}
-
-
-
-header {
-
-
-    flex-direction:column;
-
-
-    text-align:center;
-
-
-}
-
-
-
-.brand {
-
-
-    flex-direction:column;
-
-
-}
-
-
-
-.brand h1 {
-
-
-    font-size:24px;
-
-
-}
-
-
-
-header button {
-
-
-    width:100%;
-
-
-}
-
-
-
-.agenda-box {
-
-
-    width:96%;
-
-
-    margin:10px auto;
-
-
-    padding:8px;
-
-
-}
-
-
-
-.fc-toolbar {
-
-
-    flex-direction:column;
-
-
-    gap:10px;
-
-
-}
-
-
-
-.fc-toolbar-title {
-
-
-    font-size:20px !important;
-
-
-}
-
-
-
-.fc-button {
-
-
-    font-size:12px !important;
-
-
-}
-
-
-
-.modal-content {
-
-
-    padding:25px;
-
-
-}
-
-
+    }
 
 }
