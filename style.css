@@ -1,196 +1,179 @@
-/* ==========================================
+/* =======================================================
    SNEJIN AGENDA
    style.css
-========================================== */
+======================================================= */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    color: #222;
+html,body{
+    width:100%;
+    height:100%;
+    font-family:"Segoe UI",sans-serif;
 }
 
-/* ==========================================
-   LOGIN ACHTERGROND
-========================================== */
+/* ===========================================
+   LOGIN PAGINA
+=========================================== */
 
-.login-background {
+body.login-page{
 
-    min-height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 20px;
-
-    background:
+    background-image:
         linear-gradient(
-            rgba(0, 180, 200, 0.30),
-            rgba(255, 220, 150, 0.30)
+            rgba(0,180,200,.25),
+            rgba(255,210,120,.25)
         ),
         url("default_background.jpg");
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/* ==========================================
-   CONTAINER
-========================================== */
-
-.login-container {
-
-    width: 100%;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
 
 }
 
-/* ==========================================
-   LOGIN VAK
-========================================== */
+/* donkere laag */
 
-.login-card {
+.login-overlay{
 
-    width: 100%;
-    max-width: 430px;
+    width:100%;
+    min-height:100vh;
 
-    background: rgba(255,255,255,0.90);
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-    backdrop-filter: blur(12px);
+    padding:30px;
 
-    border-radius: 28px;
+}
 
-    padding: 40px;
+/* login kaart */
+
+.login-card{
+
+    width:100%;
+    max-width:430px;
+
+    background:rgba(255,255,255,.90);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:30px;
+
+    padding:40px;
+
+    text-align:center;
 
     box-shadow:
-        0 20px 50px rgba(0,0,0,.25);
+        0 25px 60px rgba(0,0,0,.30);
 
-    text-align: center;
-
-}
-
-/* ==========================================
-   LOGO
-========================================== */
-
-.logo {
-
-    width: 150px;
-
-    margin-bottom: 15px;
+    animation:fadeIn .6s ease;
 
 }
 
-/* ==========================================
-   TITELS
-========================================== */
+.logo{
 
-.login-card h1 {
+    width:140px;
 
-    color: #008c8c;
-
-    font-size: 34px;
-
-    margin-bottom: 10px;
+    margin-bottom:15px;
 
 }
 
-.subtitle {
+.login-card h1{
 
-    color: #666;
+    color:#008b8b;
 
-    margin-bottom: 30px;
+    font-size:34px;
 
-    font-size: 16px;
-
-}
-
-/* ==========================================
-   INPUTS
-========================================== */
-
-.input-group {
-
-    text-align: left;
-
-    margin-bottom: 20px;
+    margin-bottom:8px;
 
 }
 
-.input-group label {
+.subtitle{
 
-    display: block;
+    color:#666;
 
-    margin-bottom: 8px;
-
-    font-weight: 600;
-
-    color: #444;
+    margin-bottom:30px;
 
 }
 
-.input-group input {
+/* formulier */
 
-    width: 100%;
+.form-group{
 
-    height: 50px;
+    text-align:left;
 
-    border: none;
-
-    border-radius: 16px;
-
-    background: #f4f7f8;
-
-    padding: 0 18px;
-
-    font-size: 16px;
-
-    transition: .25s;
+    margin-bottom:18px;
 
 }
 
-.input-group input:focus {
+.form-group label{
 
-    outline: none;
+    display:block;
 
-    background: white;
+    margin-bottom:8px;
 
-    box-shadow: 0 0 0 3px rgba(0,168,150,.20);
+    font-weight:600;
+
+    color:#444;
 
 }
 
-/* ==========================================
-   BUTTON
-========================================== */
+.form-group input{
 
-#loginButton {
+    width:100%;
 
-    width: 100%;
+    height:52px;
 
-    height: 52px;
+    border:none;
 
-    border: none;
+    border-radius:16px;
 
-    border-radius: 16px;
+    padding:0 16px;
 
-    cursor: pointer;
+    font-size:16px;
 
-    color: white;
+    background:#f2f7f8;
 
-    font-size: 17px;
+    transition:.25s;
 
-    font-weight: bold;
+}
+
+.form-group input:focus{
+
+    outline:none;
+
+    background:white;
+
+    box-shadow:
+        0 0 0 3px rgba(0,168,150,.25);
+
+}
+
+/* knop */
+
+#loginButton{
+
+    width:100%;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:16px;
+
+    margin-top:10px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    color:white;
+
+    cursor:pointer;
 
     background:
         linear-gradient(
@@ -199,86 +182,100 @@ body {
             #02C39A
         );
 
-    transition: .25s;
+    transition:.25s;
 
 }
 
-#loginButton:hover {
+#loginButton:hover{
 
-    transform: translateY(-2px);
+    transform:translateY(-2px);
 
     box-shadow:
-        0 10px 20px rgba(0,0,0,.20);
+        0 12px 25px rgba(0,0,0,.20);
 
 }
 
-/* ==========================================
-   MELDINGEN
-========================================== */
+/* melding */
 
-#message {
+.message{
 
-    margin-top: 20px;
+    min-height:24px;
 
-    min-height: 24px;
+    margin-top:20px;
 
-    font-weight: bold;
+    font-weight:bold;
 
-    text-align: center;
+    color:#d62828;
 
 }
 
-/* ==========================================
-   RESPONSIVE
-========================================== */
+/* animatie */
 
-@media (max-width: 768px) {
+@keyframes fadeIn{
 
-    .login-card {
+    from{
 
-        padding: 30px 24px;
-
-    }
-
-    .logo {
-
-        width: 120px;
+        opacity:0;
+        transform:translateY(20px);
 
     }
 
-    .login-card h1 {
+    to{
 
-        font-size: 28px;
+        opacity:1;
+        transform:translateY(0);
 
     }
 
 }
 
-@media (max-width: 480px) {
+/* tablet */
 
-    .login-card {
+@media(max-width:768px){
 
-        border-radius: 22px;
+    .login-card{
 
-        padding: 24px;
+        max-width:420px;
 
-    }
-
-    .logo {
-
-        width: 100px;
+        padding:35px;
 
     }
 
-    .login-card h1 {
+}
 
-        font-size: 24px;
+/* mobiel */
+
+@media(max-width:480px){
+
+    .login-overlay{
+
+        padding:20px;
 
     }
 
-    .subtitle {
+    .login-card{
 
-        font-size: 14px;
+        padding:25px;
+
+        border-radius:24px;
+
+    }
+
+    .logo{
+
+        width:100px;
+
+    }
+
+    .login-card h1{
+
+        font-size:28px;
+
+    }
+
+    .subtitle{
+
+        font-size:14px;
 
     }
 
