@@ -24,18 +24,14 @@ body {
     ),
     url("default_background.jpg");
 
-
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-    padding: 20px;
+    padding:20px;
 
 }
 
@@ -43,28 +39,30 @@ body {
 
 .login-box {
 
-    width: 100%;
-    max-width: 420px;
+
+    width:100%;
+    max-width:420px;
 
 
     background:
     rgba(255,255,255,0.88);
 
 
-    backdrop-filter: blur(12px);
+    backdrop-filter:blur(12px);
 
 
-    padding: 40px 35px;
+    padding:40px 35px;
 
 
-    border-radius: 30px;
+    border-radius:30px;
 
 
-    text-align: center;
+    text-align:center;
 
 
     box-shadow:
-    0 20px 50px rgba(0,0,0,0.25);
+    0 20px 50px rgba(0,0,0,.25);
+
 
 }
 
@@ -72,10 +70,9 @@ body {
 
 .logo {
 
-    width: 150px;
-    max-width: 50vw;
+    width:min(160px,40vw);
 
-    margin-bottom: 15px;
+    margin-bottom:15px;
 
 }
 
@@ -83,11 +80,11 @@ body {
 
 .login-box h1 {
 
-    color:#007f8b;
-
     font-size:32px;
 
     margin:10px 0;
+
+    color:#007f8b;
 
 }
 
@@ -101,38 +98,31 @@ body {
 
 
 
-input,
-textarea,
-select {
+input {
 
 
     width:100%;
 
-
-    padding:14px;
+    height:50px;
 
 
     margin:10px 0;
 
 
-    border-radius:18px;
+    padding:0 20px;
 
 
-    border:1px solid #ddd;
+    border-radius:25px;
+
+
+    border:none;
+
+
+    background:#f2ffff;
 
 
     font-size:16px;
 
-
-    background:#ffffff;
-
-}
-
-
-
-textarea {
-
-    resize:none;
 
 }
 
@@ -141,7 +131,10 @@ textarea {
 button {
 
 
-    padding:14px 30px;
+    min-height:48px;
+
+
+    padding:0 30px;
 
 
     border:none;
@@ -152,9 +145,9 @@ button {
 
     background:
     linear-gradient(
-        135deg,
-        #00a896,
-        #02c39a
+    135deg,
+    #00a896,
+    #02c39a
     );
 
 
@@ -167,7 +160,7 @@ button {
     cursor:pointer;
 
 
-    transition:0.3s;
+    transition:.3s;
 
 
 }
@@ -176,9 +169,7 @@ button {
 
 button:hover {
 
-
     transform:translateY(-2px);
-
 
 }
 
@@ -186,8 +177,7 @@ button:hover {
 
 #error {
 
-
-    color:red;
+    color:#d62828;
 
     font-weight:bold;
 
@@ -206,8 +196,8 @@ button:hover {
     background-image:
 
     linear-gradient(
-        rgba(255,255,255,0.25),
-        rgba(0,150,160,0.25)
+    rgba(255,255,255,.25),
+    rgba(0,150,160,.25)
     ),
 
     url("main_background.jpg");
@@ -215,11 +205,10 @@ button:hover {
 
     background-size:cover;
 
-
     background-position:center;
 
 
-    background-attachment:fixed;
+    padding:0;
 
 
 }
@@ -236,10 +225,10 @@ header {
     display:flex;
 
 
-    justify-content:space-between;
-
-
     align-items:center;
+
+
+    justify-content:space-between;
 
 
     gap:20px;
@@ -249,7 +238,8 @@ header {
 
 
     background:
-    rgba(255,255,255,0.85);
+
+    rgba(255,255,255,.85);
 
 
     backdrop-filter:blur(12px);
@@ -261,7 +251,7 @@ header {
     top:0;
 
 
-    z-index:50;
+    z-index:10;
 
 
 }
@@ -273,12 +263,9 @@ header {
 
     display:flex;
 
-
     align-items:center;
 
-
     gap:15px;
-
 
 }
 
@@ -289,12 +276,9 @@ header {
 
     margin:0;
 
-
     color:#007f8b;
 
-
     font-size:28px;
-
 
 }
 
@@ -305,8 +289,8 @@ header {
 
     width:70px;
 
-
 }
+
 
 
 
@@ -316,14 +300,13 @@ header button {
     background:
 
     linear-gradient(
-        135deg,
-        #ff9f1c,
-        #ffbf69
+    135deg,
+    #ff9f1c,
+    #ffbf69
     );
 
 
     width:auto;
-
 
 }
 
@@ -337,8 +320,7 @@ header button {
 .agenda-box {
 
 
-    width:
-    calc(100% - 40px);
+    width:calc(100% - 40px);
 
 
     max-width:1600px;
@@ -347,15 +329,15 @@ header button {
     margin:20px auto;
 
 
-    padding:25px;
+    padding:20px;
 
 
     background:
 
-    rgba(255,255,255,0.88);
+    rgba(255,255,255,.88);
 
 
-    backdrop-filter:blur(12px);
+    backdrop-filter:blur(10px);
 
 
     border-radius:30px;
@@ -381,16 +363,17 @@ header button {
 
 
 
+
 .fc {
 
 
     background:white;
 
 
-    padding:15px;
-
-
     border-radius:20px;
+
+
+    padding:10px;
 
 
 }
@@ -407,176 +390,6 @@ header button {
 
 
 
-.fc-button {
-
-
-    border-radius:15px !important;
-
-
-    border:none !important;
-
-
-}
-
-
-
-/* =========================
-   AFSPRAAK POPUP
-========================= */
-
-
-.modal {
-
-
-    display:none;
-
-
-    position:fixed;
-
-
-    inset:0;
-
-
-    background:
-
-    rgba(0,0,0,0.45);
-
-
-    justify-content:center;
-
-
-    align-items:center;
-
-
-    z-index:1000;
-
-
-    padding:20px;
-
-
-}
-
-
-
-.modal-content {
-
-
-    width:100%;
-
-
-    max-width:450px;
-
-
-    background:white;
-
-
-    padding:35px;
-
-
-    border-radius:30px;
-
-
-    box-shadow:
-
-    0 20px 50px rgba(0,0,0,.3);
-
-
-}
-
-
-
-.modal-content h2 {
-
-
-    text-align:center;
-
-
-    color:#007f8b;
-
-
-}
-
-
-
-.modal-content label {
-
-
-    display:block;
-
-
-    margin-top:10px;
-
-
-    font-weight:bold;
-
-
-}
-
-
-
-.modal-content input[type="checkbox"] {
-
-
-    width:auto;
-
-
-    margin-right:8px;
-
-
-}
-
-
-
-#saveEvent {
-
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #00a896,
-        #02c39a
-    );
-
-
-}
-
-
-
-#closeModal {
-
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #ff9f1c,
-        #ffbf69
-    );
-
-
-}
-
-
-
-/* =========================
-   KALENDER KLEUREN
-========================= */
-
-
-/* Werken */
-
-.fc-event {
-
-    border:none !important;
-
-    padding:4px;
-
-    border-radius:8px;
-
-}
-
-
 
 /* =========================
    TABLET
@@ -588,33 +401,44 @@ header button {
 
 header {
 
+
     padding:15px;
 
+
 }
+
 
 
 .brand h1 {
 
+
     font-size:22px;
 
+
 }
+
 
 
 .logo-small {
 
+
     width:55px;
 
+
 }
+
 
 
 .agenda-box {
 
+
     width:95%;
 
-    padding:15px;
+
+    padding:10px;
+
 
 }
-
 
 
 }
@@ -631,7 +455,9 @@ header {
 
 .login-box {
 
+
     padding:30px 20px;
+
 
 }
 
@@ -639,7 +465,9 @@ header {
 
 .login-box h1 {
 
+
     font-size:26px;
+
 
 }
 
@@ -691,13 +519,13 @@ header button {
 .agenda-box {
 
 
-    width:96%;
-
-
     margin:10px auto;
 
 
-    padding:8px;
+    width:96%;
+
+
+    padding:5px;
 
 
 }
@@ -731,16 +559,6 @@ header button {
 
 
     font-size:12px !important;
-
-
-}
-
-
-
-.modal-content {
-
-
-    padding:25px;
 
 
 }
