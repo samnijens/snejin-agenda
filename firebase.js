@@ -1,19 +1,11 @@
-// ==============================
-// SNEJIN AGENDA
-// Firebase configuratie
-// ==============================
-
+// Firebase SDK
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
 
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
 
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
 
-import { getStorage } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-storage.js";
-
-
-// Firebase configuratie
-
+// Firebase Config
 const firebaseConfig = {
 
     apiKey: "AIzaSyARKx42cvUgW9Qpf33DmBirfMdSERi8Jl8",
@@ -30,21 +22,11 @@ const firebaseConfig = {
 
 };
 
-
-// Firebase initialiseren
-
+// Firebase starten
 const app = initializeApp(firebaseConfig);
 
-
-// Services exporteren
-
+// Exporteren
 export const auth = getAuth(app);
-
 export const db = getFirestore(app);
 
-export const storage = getStorage(app);
-
-
-// Debugmelding
-
-console.log("✅ Firebase succesvol geïnitialiseerd");
+console.log("✅ Firebase succesvol gestart");
