@@ -1,19 +1,26 @@
 // =====================================================
 // SNEJIN AGENDA
 // firebase.js
+// Firebase configuratie + Firestore
 // =====================================================
 
 
-import { initializeApp } 
-from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+// Firebase imports
+
+import { initializeApp } from 
+"https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
 
 
-import { getAuth } 
-from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
+import { 
+    getAuth 
+} from 
+"https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
 
 
-import { getFirestore } 
-from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
+import { 
+    getFirestore 
+} from 
+"https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
 
 
 
@@ -46,8 +53,13 @@ const app = initializeApp(firebaseConfig);
 
 
 
-// Exporteren voor andere bestanden
+// Authentication
 
 export const auth = getAuth(app);
+
+
+
+
+// Firestore database
 
 export const db = getFirestore(app);
