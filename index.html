@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Snejin Agenda - Inloggen</title>
 
-    <meta name="theme-color" content="#009688">
+    <meta name="theme-color" content="#00A896">
 
     <link rel="icon" type="image/png" href="logo.png">
 
@@ -17,70 +19,73 @@
 
 <body class="login-background">
 
-<div class="login-container">
+    <div class="login-container">
 
-    <div class="login-card">
+        <div class="login-card">
 
-        <img
-            src="logo.png"
-            alt="Snejin Agenda"
-            class="logo">
+            <img
+                src="logo.png"
+                alt="Snejin Agenda Logo"
+                class="logo">
 
-        <h1>Snejin Agenda</h1>
+            <h1>Snejin Agenda</h1>
 
-        <p class="subtitle">
-            Familieagenda voor iedereen 🌴
-        </p>
+            <p class="subtitle">
+                Welkom! Log in om je familieagenda te openen.
+            </p>
 
-        <form id="loginForm">
+            <form id="loginForm">
 
-            <div class="input-group">
+                <div class="input-group">
 
-                <label for="email">
-                    E-mailadres
-                </label>
+                    <label for="email">
+                        E-mailadres
+                    </label>
 
-                <input
-                    id="email"
-                    type="email"
-                    autocomplete="email"
-                    placeholder="naam@email.nl"
-                    required>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="naam@email.nl"
+                        autocomplete="email"
+                        required>
 
-            </div>
+                </div>
 
-            <div class="input-group">
+                <div class="input-group">
 
-                <label for="password">
-                    Wachtwoord
-                </label>
+                    <label for="password">
+                        Wachtwoord
+                    </label>
 
-                <input
-                    id="password"
-                    type="password"
-                    autocomplete="current-password"
-                    placeholder="••••••••"
-                    required>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Voer je wachtwoord in"
+                        autocomplete="current-password"
+                        required>
 
-            </div>
+                </div>
 
-            <button
-                type="submit"
-                id="loginButton">
+                <button
+                    type="submit"
+                    id="loginButton">
 
-                Inloggen
+                    🔐 Inloggen
 
-            </button>
+                </button>
 
-        </form>
+            </form>
 
-        <div id="message"></div>
+            <div id="message"></div>
+
+        </div>
 
     </div>
 
-</div>
-
-<script type="module" src="login.js"></script>
+    <script type="module" src="login.js"></script>
 
 </body>
+
 </html>
