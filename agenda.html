@@ -1,104 +1,75 @@
 <!DOCTYPE html>
 <html lang="nl">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Snejin Agenda</title>
-
-    <link rel="icon" href="logo.png">
-
-    <link rel="stylesheet" href="style.css">
-
-    <!-- FullCalendar -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css"
-        rel="stylesheet">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snejin Agenda</title>
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css" rel="stylesheet">
 </head>
-
 <body class="agenda-page">
 
-    <!-- =========================
-         HEADER
-    ========================== -->
+<header class="topbar">
+  <div class="logo-area">
+    <img src="logo.png" class="logo-small" alt="Logo">
+    <div>
+      <h1>Snejin Agenda</h1>
+      <span>Familieagenda</span>
+    </div>
+  </div>
 
-    <header class="topbar">
+  <div class="top-buttons">
+    <input id="search" type="search" placeholder="🔍 Zoek afspraak">
+    <button id="themeButton" type="button">🌙</button>
+    <button id="logoutButton" type="button">🚪 Uitloggen</button>
+  </div>
+</header>
 
-        <div class="logo-area">
+<main>
+  <section class="calendar-card">
+    <div id="calendar"></div>
+  </section>
+</main>
 
-            <img
-                src="logo.png"
-                class="logo-small"
-                alt="Snejin Agenda logo">
+<button id="addEventButton" class="floatingButton" type="button">+</button>
 
-            <div>
-                <h1>Snejin Agenda</h1>
-                <span>Familieagenda</span>
-            </div>
+<div id="eventModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <h2>Nieuwe afspraak</h2>
 
-        </div>
+    <label>Naam</label>
+    <input id="eventTitle" type="text">
 
-        <div class="top-buttons">
+    <label>Omschrijving</label>
+    <textarea id="eventDescription"></textarea>
 
-            <input
-                id="search"
-                type="search"
-                placeholder="🔍 Zoek afspraak">
+    <label>Datum</label>
+    <input id="eventDate" type="date">
 
-            <button
-                id="themeButton"
-                type="button"
-                title="Donkere modus">
-                🌙
-            </button>
+    <label>Tijd</label>
+    <input id="eventTime" type="time">
 
-            <button
-                id="logoutButton"
-                type="button">
-                🚪 Uitloggen
-            </button>
+    <label><input id="allDay" type="checkbox"> Hele dag</label>
 
-        </div>
+    <label>Categorie</label>
+    <select id="eventType">
+      <option value="work">🔴 Werken</option>
+      <option value="holiday">🟢 Vakantie</option>
+      <option value="activity">🟩 Activiteit</option>
+      <option value="birthday">🟠 Verjaardag</option>
+      <option value="holidayofficial">🟡 Officiële feestdag</option>
+    </select>
 
-    </header>
+    <div class="modal-buttons">
+      <button id="saveEventButton">Opslaan</button>
+      <button id="deleteEventButton">Verwijderen</button>
+      <button id="cancelEventButton">Annuleren</button>
+    </div>
+  </div>
+</div>
 
-    <!-- =========================
-         KALENDER
-    ========================== -->
-
-    <main>
-
-        <section class="calendar-card">
-
-            <div id="calendar"></div>
-
-        </section>
-
-    </main>
-
-    <!-- =========================
-         PLUS KNOP
-    ========================== -->
-
-    <button
-        id="addEventButton"
-        class="floatingButton"
-        type="button"
-        aria-label="Nieuwe afspraak toevoegen">
-        +
-    </button>
-
-    <!-- =========================
-         POPUP ACHTERGROND
-    ========================== -->
-
-    <div
-        id="eventModal"
-        class="modal"
-        aria-hidden="true">
-
-        <div class="modal-content">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+<script type="module" src="agenda.js"></script>
+</body>
+</html>
