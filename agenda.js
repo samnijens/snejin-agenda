@@ -86,8 +86,9 @@ const categoryLabels = {
     holiday:         "🟢 Vakantie",
     activity:        "🟩 Activiteit",
     birthday:        "🟠 Verjaardag",
+    ez:              "🟧 EquintaZ"
     holidayofficial: "🟡 Officiële feestdag"
-    gb: "🟨 GamerBaas"
+    gb:              "🟨 GamerBaas"
     other:           "⚫ Overig"
 };
 
