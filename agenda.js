@@ -86,10 +86,7 @@ const categoryLabels = {
     holiday:         "🟢 Vakantie",
     activity:        "🟩 Activiteit",
     birthday:        "🟠 Verjaardag",
-    ez:              "🟧 EquintaZ"
     holidayofficial: "🟡 Officiële feestdag"
-    gb:              "🟨 GamerBaas"
-    other:           "⚫ Overig"
 };
 
 function getEventColor(category) {
